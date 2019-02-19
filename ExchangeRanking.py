@@ -26,6 +26,7 @@ def get_form_data():
     #df.to_csv(path_or_buf='/Users/eliogruttadauria/Desktop/googlesheet_exchange.csv')
 
     df.drop_duplicates('Student ID', keep='last', inplace=True)
+    df = df.reset_index(drop=True)
 
     return df
 
